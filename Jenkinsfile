@@ -30,7 +30,7 @@ pipeline {
       stage('Clean') {
         agent{label 'awsDeploy'}
         steps{
-          sh '''#!bin/bash
+          sh '''#!/bin/bash
           if [[ $(ps aux | grep -i "gunicorn" | tr -s " " | head -n 1 | cut -d " " -f 2) != 0 ]]
           then
             ps aux | grep -i "gunicorn" | tr -s " " | head -n 1 | cut -d " " -f 2 > pid.txt
