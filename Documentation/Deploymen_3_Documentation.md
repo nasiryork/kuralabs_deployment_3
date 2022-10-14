@@ -1,8 +1,5 @@
 <h1 align=center>Deployment 3 Documentation</h1>
 
-# Deployment 3
-- Any file with the .md extension will be formatted into a Markdown File
-
 ## Deployment Goal:
 - Learn how to Deploy an application using 2 VPCs and a Jenkins Agent.
 
@@ -71,7 +68,7 @@ python3 -m gunicorn -w 4 application:app -b 0.0.0.0 --daemon
 ```
 
 
-## Jenkin Pipeline:
+## Jenkins Pipeline:
 
 - After editing the Jenkins File, I constructed the Jenkins Pipeline. Initially I ran into problems during the testing and deploy stages but after some time I figured out the issues. I then got the pipeline to deploy.
 
@@ -86,7 +83,7 @@ python3 -m gunicorn -w 4 application:app -b 0.0.0.0 --daemon
 
 ## Diagram:
 
-![](https://lh3.googleusercontent.com/2vnkPmtuahS73togM7hOJpEs1KfQUGNV-N48Eh0HRWHe6xmS5lQG6oBylx4FMauVIZDCVWAIDNDA7Q5ngMruETiWalPxlnon6-FXHra4KCruMdOw1dP1FhVUSxo0IT5gALZ-xSDbqseyOLARi_3KNDoQ3YRm7hFhOaNDxM4FWpaI5cL9NMK7wEGQog)
+![image](https://github.com/nasiryork/kuralabs_deployment_3/blob/main/static/3cdd1d09a6f1950fad92d71897535556.png)
 
 ## Challenges:
 
@@ -98,7 +95,7 @@ python3 -m gunicorn -w 4 application:app -b 0.0.0.0 --daemon
 
 - After reading the errors I saw that my test wasn’t passing. I then went to the test_app.py file within github and fixed the test.
 
-- My final challenge occurred when trying to get my application to appear. At the time my Jenkins Pipeline showed that the application was properly constructed. -After consulting with one of my peers we figured out the solution. Inorder for the changes made to the /etc/nginx/sites-enabled/default file to take effect nginx needed to be restarted. After running
+- My final challenge occurred when trying to get my application to appear. At the time my Jenkins Pipeline showed that the application was properly constructed. -After consulting with one of my peers we figured out the solution. Inorder for the changes made to the /etc/nginx/sites-enabled/default file to take effect nginx needed to be restarted. After running:
 ```
 sudo service nginx start
 sudo service nginx stop
