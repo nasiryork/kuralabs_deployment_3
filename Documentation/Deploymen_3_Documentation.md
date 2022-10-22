@@ -83,7 +83,7 @@ python3 -m gunicorn -w 4 application:app -b 0.0.0.0 --daemon
 
 ## Diagram:
 
-![image](https://github.com/nasiryork/kuralabs_deployment_3/blob/main/static/3cdd1d09a6f1950fad92d71897535556.png)
+![image](https://github.com/nasiryork/kuralabs_deployment_3/blob/main/Documentation/Deployment%203%20Diagram%202%20VPC.png)
 
 ## Challenges:
 
